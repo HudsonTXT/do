@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="ru">
+    <title>Выбор трека</title>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter23108797 = new Ya.Metrika({id:23108797,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true});
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/23108797" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <script>
+        VK.init({
+            apiId: 4004433
+        });
+    </script>
+    <link rel="stylesheet" href="set/style.css">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+<div class="menu">
+    <ul>
+        <a href="http://fandance.ru/"><li>Главная</li></a>
+        <a href="http://fandance.ru/promo"><li>О сайте</li></a>
+        <a href="http://vk.com/fan_dance"><li>Мы Вконтакте</li></a>
+        <a href="http://fandance.ru/showthread.php?t=582"><li class="redText">Помощь</li></a>
+    </ul>
+</div>
+<div class="trackList">
+    <center><img src="image/logo.png" alt="" /></center>
+    <div class="head blue">Пожалуйста выберите песню</div>
+    <div class="textBox">
+        <input class="word" placeholder="Поиск" type="text" />
+        <div class="search" style="display: none;"></div>
+    </div>
+    <div class="audio">
+        <div class="login">Для получения списка песен войдите через вконтакте:<br/>
+            <div id="login_button" onclick="VK.Auth.login(authInfo, 9);getM();"></div>
+        </div>
+    </div>
+    <div class="bmp"><p>Укажите бит</p> <input class="input" type="text" value="60" maxlength="3" max="280" min="60"/></div>
+    <div class="butt"><a href="#">
+        Начать танец
+    </a></div>
+</div>
+<div class="footer">
+
+</div>
+<script>
+    $('.word').keyup(function(){
+        var Value = $(this).val();
+        $('.search').fadeIn(100);
+        $('.audio .song').css('display', 'none');
+        $( ".song:contains("+Value+")" ).css("display", "block" );
+    });
+    $('.search').click(function(){
+        searchBack();
+        $(this).fadeOut(100);
+    });
+    function searchBack(){
+        $('.audio .song').css('display', 'block');
+        $('.word').val("");
+    }
+    function authInfo(r) {
+        if (r.session) {
+            VK.Api.call('audio.get', {need_user:1, count:100}, function(r){
+                musica = r.response;
+                getM();
+                $('.song').click(function(){
+                $('.song').removeClass('active').addClass('unActive');
+                $(this).removeClass('unActive').addClass('active');
+            });
+
+            return musica;
+            });
+        }
+    }
+    VK.Auth.getLoginStatus(authInfo);
+    VK.UI.button('login_button');
+    function getM(){
+        $('.audio').html("");
+        songs = 1;
+        while(songs != musica.length){
+            audioCur = $('.audio').html();
+            $('.audio').html(audioCur +'<div class="song unActive" dur="'+musica[songs].duration+'" song_url="'+ musica[songs].url +'">'+musica[songs].artist+' – '+musica[songs].title+'</div>');
+            songs++;
+        }
+    }
+    jQuery.fn.ForceNumericOnly =
+            function()
+            {
+                return this.each(function()
+                {
+                    $(this).keydown(function(e)
+                    {
+                        var key = e.charCode || e.keyCode || 0;
+                        // Разрешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
+                        return (
+                                key == 8 ||
+                                        key == 9 ||
+                                        key == 46 ||
+                                        (key >= 37 && key <= 40) ||
+                                        (key >= 48 && key <= 57) ||
+                                        (key >= 96 && key <= 105));
+                    });
+                });
+            };
+    $('.input').ForceNumericOnly();
+    setInterval(function(){
+        url = $('.song.active').attr('song_url');
+        dur = $('.song.active').attr('dur');
+        bpm = $('.input').val();
+        artist = $('.song.active').text();
+        $('.butt a').attr("href", "dance.php?song="+url+"&bpm="+bpm+'&artist='+artist+"&dur="+dur);
+    }, 0);
+    $('.menu li').hover(function(){
+        $(this).animate({opacity: 1}, 100);
+    }, function(){
+        $(this).animate({opacity: 0.5}, 100);
+    });
+</script>
+
+</body>
+</html>

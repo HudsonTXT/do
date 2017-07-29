@@ -1,0 +1,191 @@
+.shop {
+  .block_content {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .item {
+    display: inline-block;
+    vertical-align: top;
+    width: 176px;
+    margin: 10px 10px;
+    text-align: center;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px 0px rgba(185, 185, 185, 0.28);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    height: 256px;
+    background: rgba(228, 228, 228, 0.27);
+    &:hover {
+      background: #fff;
+      box-shadow: 0 7px 20px rgba(185, 185, 185, 0.28);
+      background: linear-gradient(90deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%);
+      background-size: 400% 400%;
+      -webkit-animation: button 5s ease infinite;
+      -moz-animation: button 5s ease infinite;
+      animation: button 5s ease infinite;
+      color: #fff;
+      .button{
+        padding: 3px;
+        text-align: center;
+        line-height: normal;
+        font-size: 16px;
+
+        color: #fff;
+        border: none;
+        overflow: hidden;
+        transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        &:before{
+          width: 100px;
+          opacity: 1;
+          background: #fff;
+          transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transform: rotate(360deg);
+          margin-top: -0.5px;
+          margin-left: -50px;
+          transition: background 0.3s linear;
+        }
+        .days{
+          display: inline-block;
+        }
+        .allPrice{
+          font-size: 14px;
+          margin-top: 5px;
+          position: relative;
+          text-align: center;
+          right: 5px;
+        }
+        .price{
+          margin-left: 10px;
+        }
+      }
+
+    }
+    .item_image {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .item_image img {
+      width: 100px;
+
+    }
+    .item_name {
+      font: 14px 'Proxima Nova Bold';
+      margin-bottom: 5px;
+    }
+    .item_description {
+      margin-bottom: 15px;
+      height: 35px;
+    }
+    .button {
+      text-align: left;
+      width: 150px;
+      /*color: #fff;*/
+      height: 50px;
+      background: transparent;
+      border: 1px solid #d4d4d4;
+      box-shadow: none;
+      font-size: 18px;
+      line-height: 50px;
+      box-sizing: border-box;
+      padding: 0px 10px;
+      font-family: 'Proxima Nova Semibold';
+      position: relative;
+      transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+      .price{
+
+      }
+      /*&:hover {
+        padding: 3px;
+        text-align: center;
+        line-height: normal;
+        font-size: 16px;
+        background: linear-gradient(90deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%);
+        background-size: 400% 400%;
+        -webkit-animation: button 2s ease infinite;
+        -moz-animation: button 2s ease infinite;
+        animation: button 2s ease infinite;
+        color: #fff;
+        border: none;
+        overflow: hidden;
+        transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        &:before{
+          width: 100px;
+          opacity: 1;
+          background: #fff;
+          transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transform: rotate(360deg);
+          margin-top: -0.5px;
+          margin-left: -50px;
+          transition: background 0.3s linear;
+        }
+        .days{
+          display: inline-block;
+        }
+        .allPrice{
+          font-size: 14px;
+          margin-top: 5px;
+          position: relative;
+          text-align: center;
+          right: 5px;
+        }
+        .price{
+          margin-left: 10px;
+        }
+      }*/
+      &:before{
+        content: ' ';
+        width: 25px;
+        transform: rotate(-65deg);
+        height: 1px;
+        left: 50%;
+        margin-left: -10px;
+        top: 50%;
+        background: #333;
+        margin-top: 0.5px;
+        position: absolute;
+        transition: background 0.2s linear;
+
+      }
+      img {
+        margin-left: -3px;
+      }
+      .item_price{
+        margin-top: 5px;
+      }
+      .days{
+        display: none;
+      }
+
+      .allPrice {
+        position: absolute;
+        font-size: inherit;
+        right: 20px;
+        top: 0;
+        text-align: right;
+
+        &:before {
+          content: ' ';
+          position: absolute;
+          background: url(/img/m.svg);
+          top: 50%;
+          right: -13px;
+          width: 12px;
+          margin-top: -6px;
+          height: 12px;
+          background-size: cover;
+        }
+      }
+
+    }
+  }
+}

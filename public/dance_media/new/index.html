@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Dance Online! - онлайн тренер для танцевальных игр</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>
+    <script src="scripts/login.js"></script>    
+</head>
+<body>
+    <div class="content">
+        <div class="logo"><img src="images/logo.png"></div>
+        <section id="login">
+            <p>Пожалуйста, авторизуйтесь с помощью VK</p>
+            <button class="m0a loginVK">Вход</button>
+        </section>        
+        <section id="select-music" style="display:none;">
+            <form action="http://fandance.ru/music/dance.php" method="get">
+                <input type="text" name="song" class="url mb30" placeholder="Введите URL трека.mp3" required>
+                <input type="number" min="60" step="10" max="256" name="bpm" class="bpm mb30 " placeholder="BPM" required>
+                <button type="submit" class="m0a">Начать танец</button>
+            </form>
+            <div class="help-links">
+                <a href="https://www.google.com/search?q=intitle:index.of?mp3 название трека" target="_blank">Поиск треков</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

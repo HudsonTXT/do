@@ -1,0 +1,230 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #b4b4b4;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 450px;
+    height: 100vh;
+    background: url(../images/bg.jpg) top center;
+    _min-height: 550px;
+    font: 14px 'PT Sans';
+    color: white;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+.content {
+    max-width: 860px;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 75%;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+}
+.logo img{
+    max-width: 100%;
+    height: auto;
+}
+
+.content input[type=text],
+.content input[type=number] {
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(151, 33, 193);
+    background-color: rgb(255, 255, 255);
+    box-shadow: -0.908px 1.782px 10.79px 2.21px rgba(0, 0, 0, 0.75);
+    height: 64px;
+    font: 36px 'Pt Sans';
+    text-align: center;
+}
+
+.content .url {
+    width: 100%;
+}
+
+.content button {
+    background: url(../images/button.png) top center no-repeat;
+    width: 298px;
+    height: 111px;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    border: none;
+    font-family: 'PT Sans';
+    display: block;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.content .bpm {
+    width: 265px;
+}
+
+.content button:hover {
+    background: url(../images/button_h.png) top center no-repeat;
+    text-shadow: 0px 0px 7px rgb(165, 6, 249);
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.m0a {
+    margin: 0 auto;
+}
+
+.va {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#select-music {
+    text-align: center;
+}
+
+.help-links{
+    margin-bottom: 10px;
+}
+
+.help-links a {
+    color: #818181;
+}
+
+#login {
+    text-align: center;
+}
+
+#login p {
+    color: #818181;
+    font-size: 18px;
+}
+
+.user-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.user-image {
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.user-profile {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    color: #818181;
+}
+.user-profile a{
+    color: inherit;
+}
+/* Song select */
+.music_list{
+    width: 100%;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(151, 33, 193);
+    background-color: rgb(255, 255, 255);
+    box-shadow: -0.908px 1.782px 10.79px 2.21px rgba(0, 0, 0, 0.75);  
+    margin-bottom: 30px;  
+}
+.music_item, .item_first{
+    width: 100%;
+    height: 50px;
+    background: url(../images/bg.jpg) top center;
+    line-height: 50px;
+    text-align: left;
+    margin-bottom: 1px;
+    font-size: 15px;
+    transition: all .2s ease-in-out;
+}
+.music_item{
+    cursor: pointer;
+}
+.music_item:hover{
+    box-shadow: inset 0 0 20px -2px #a506f9;
+}
+.active_item, .active_item:hover{
+    box-shadow: inset 0 0 20px 1px #a506f9;
+    font-weight: bold;
+    text-shadow: 0px 0px 7px rgb(165, 6, 249);
+}
+.item__name, .item__bpm, .item__length{
+    display: inline-block;
+}
+.item__bpm, .item__length{
+    font-weight: bold;
+    text-align: center;
+}
+.item__name {
+    width: 80%;
+    padding: 0 10px;
+}
+.item__bpm {
+    width: 9%;
+}
+.item__length {
+    width: 10%; 
+}
+.item_first {
+    opacity: 0.92;
+    color: #fff;
+    font-weight: 900;
+}
+.select_type_buttons a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: dotted 3px white;
+}

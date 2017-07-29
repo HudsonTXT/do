@@ -1,0 +1,86 @@
+.activity_menu {
+    cursor: pointer;
+    position: relative;
+    span.icon {
+        background-image: url('/img/alarm.svg');
+        background-size: 25px;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: top;
+    }
+    &:hover span.icon {
+        /*animation: wobble 1s;*/
+    }
+    margin-left: 452px;
+}
+
+.activity_block {
+    display: none;
+    width: 500px;
+    max-height: 355px;
+    position: absolute;
+    background: #f2f2f2;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.46);
+    border: 1px solid rgba(185, 185, 185, 0.28);
+    top: 49px;
+    right: 50%;
+    margin-right: -250px;
+    cursor: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 30px;
+    .block .block_content {
+        margin-bottom: 0;
+    }
+    .news .block_content {
+        min-height: 300px;
+    }
+    .block-empty {
+        width: 100%;
+        color: #333;
+        text-align: center;
+        padding: 120px 0;
+        background: url(/landing/img/favorites.svg) center 64px no-repeat;
+        background-size: 50px;
+        font-size: 16px;
+        font-family: 'Proxima Nova Bold';
+
+    }
+    .block .block__separator {
+        height: auto;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    .activity_head {
+        background: #f1f1f3;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.14);
+        height: 30px;
+        line-height: 30px;
+        color: #333;
+        font-family: 'Proxima Nova Semibold';
+        text-align: center;
+        position: absolute;
+        top: 0;
+    }
+    &.animated {
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+    }
+}
+.news__text{
+    font-family: 'Proxima Nova' !important;
+}
+.activity_new {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 100%;
+    top: 11px;
+    left: 30px;
+}

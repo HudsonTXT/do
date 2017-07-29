@@ -1,0 +1,63 @@
+*{
+  box-sizing: border-box;
+
+}
+
+body{
+  margin: 0 auto;
+  background: #dfe3ee;
+  font: 14px 'PT Sans';
+  color: #3b5998;
+}
+.container{
+  width: 98%;
+  min-width: 680px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.left-side{
+  width: 29%;
+  max-width: 350px;
+}
+.right-side{
+  width: 70%;
+  background: #f7f7f7;
+  border-radius: 5px;
+  font-weight: normal;
+  padding: 0px 10px;
+  margin: 15px 0;
+}
+.left-side, .right-side {
+    display: inline-block;
+    vertical-align: top;
+}
+.counters{
+  width: 100%;
+
+}
+.counters p {
+    display: inline-block;
+    width: 32%;
+    font-size: 30px;
+    text-align: center;
+    background: #f7f7f7;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 6px 0;
+    margin: 15px 0px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.counters p:hover{
+  background: #3b5998;
+  color: #f7f7f7;
+}
+.counters p span{
+  font-size: 10px;
+  display: block;
+  font-weight: normal;
+}
+#nothing{
+  text-align: center;
+  margin: 0 auto;
+}

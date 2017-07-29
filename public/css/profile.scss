@@ -1,0 +1,204 @@
+.profile{
+
+  .block_content {
+    padding: 15px;
+    box-sizing: border-box;
+    color: #333;
+    position: relative;
+    overflow: hidden !important;
+  }
+  .profile_image {
+    float: left;
+    width: 200px;
+    position: relative;
+    z-index: 2;
+      img{
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
+      }
+
+  }
+  .profile_info{
+    margin-left: 245px;
+  .info_name__status{
+    color: #000;
+    position: absolute;
+    right: -10px;
+    bottom: -40px;
+    font-size: 130px;
+    font-family: 'Proxima Nova Bold';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+  }
+    .info_name{
+      font: 24px 'Proxima Nova Bold';
+      margin-bottom: 24px;
+      position: relative;
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #e7e7e7;
+        bottom: -7px;
+      }
+
+    }
+    span{
+
+    }
+    .info_lastin{
+      font-size: 16px;
+      font-family: 'Proxima Nova Bold';
+      float: right;
+      vertical-align: middle;
+      text-transform: capitalize;
+      margin-top: 5px;
+    }
+  }
+
+  .circle{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 10px;
+    #lvl_num {
+      position: absolute;
+      color: #333;
+      font: 50px 'Proxima Nova Bold';
+      display: block;
+      width: 120px;
+      height: 120px;
+      left: 0;
+      top: 50%;
+      margin-top: -38px;
+      letter-spacing: .01em;
+
+      span{
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: -12px;
+        display: block;
+      }
+    }
+    &:nth-child(2n) {
+      margin: 10px 70px !important;
+    }
+  }
+  .block.profile_bonuses {
+    width: 320px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .profile_bonuses{
+    .block_content{
+      text-align: center;
+    }
+    .bonus{
+      text-align: center;
+      font: 14px 'Proxima Nova Semibold';
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      img{
+        width: 100px;
+        display: block;
+        margin: 5px 20px;
+      }
+      display: inline-block;
+      vertical-align: top;
+      span{
+        display: block;
+        font-size: 18px;
+        font-family: 'Proxima Nova Bold';
+        margin-top: 10px;
+        position: relative;
+
+        &:before{
+          content: ' ';
+          position: absolute;
+          width: 50px;
+          height: 1px;
+          background: rgba(51, 51, 51, 0.35);
+          left: 50%;
+          margin-left: -25px;
+          top: -5px;
+        }
+      }
+    }
+  }
+
+  .profile_medals{
+    width: 475px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+
+    overflow: hidden;
+      .block_content{
+        white-space: nowrap;
+        height: 160px;
+        padding: 15px 30px;
+      }
+    .carousel_right{
+      position: absolute;
+      right: 5px;
+      background: url('/img/medals/next.svg') center;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      margin-top: -10px;
+      cursor: pointer;
+      background-size: cover;
+    }
+    .carousel_left{
+      position: absolute;
+      left: 5px;
+      background: url('/img/medals/next.svg') center;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      margin-top: -10px;
+      cursor: pointer;
+      background-size: cover;
+    }
+    .no-medals{
+      text-align: center;
+      text-transform: uppercase;
+      color: #d4d4d4;
+      letter-spacing: .04em;
+      font-family: 'Proxima Nova Bold';
+      img{
+        margin-bottom: 20px;
+      }
+    }
+    .medals_carousel{
+      position: absolute;
+      left: 25px;
+    }
+    .medal{
+
+      white-space: normal;
+      width: 100px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      margin:5px 20px;
+      img{
+        width: 100px;
+      }
+    }
+  }
+}

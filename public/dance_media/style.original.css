@@ -1,0 +1,161 @@
+body{background: #16124c url("image/bg.jpg") no-repeat center top;font-family: Segoe Light, "Segoe UI Light", "Myriad Pro", sans-serif;margin: 0;}
+@import url(http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic);
+#vkshare0{
+    margin: 0 auto;
+}
+.result {
+    display: none;
+    font-family: 'PT Sans', sans-serif;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 30pt;
+    color: rgb(2, 2, 2);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+.info{
+    position: fixed;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14pt;
+    color: white;
+    background: #5100A8;
+    border: 1px solid #907BA3;
+    right: 0px;
+    bottom: -3px;
+    border-radius: 18px 0px 0px 0px;
+    padding: 5px;
+}
+.panel {
+    margin: 0 auto;
+    position: relative;
+    width: 513px;
+    height: 85px;
+    background: url(./image/bg_panel.png) top center no-repeat;
+    text-align: center;
+}
+.panel:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.ar{
+    width: 45px;
+    height: 47px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.right{
+    background: url(image/right.png) top center no-repeat;
+}
+.rightkl{
+    background: url(image/rightkl.png) top center no-repeat;
+}
+.up{
+    background: url(image/up.png) top center no-repeat;
+}
+.down{
+    background: url(image/down.png) top center no-repeat;
+}
+.left{
+    background: url(image/left.png) top center no-repeat;
+}
+.upkl{
+    background: url(image/upkl.png) top center no-repeat;
+}
+.downkl{
+    background: url(image/downkl.png) top center no-repeat;
+}
+.leftkl{
+    background: url(image/leftkl.png) top center no-repeat;
+}
+/*.time{
+    width:200px;
+    height:50px;
+    font-size: 20pt;
+    color: whitesmoke;
+    position: fixed;
+    bottom: -13px;
+    left:25%;
+    background: blueviolet;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    -moz-box-shadow: 0px 0px 2px #000000;
+    -webkit-box-shadow: 0px 0px 2px #000000;
+    box-shadow: 0px 0px 2px #000000;
+
+}
+*/
+.dance{
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    top: -102px;
+    position: relative;
+}
+.spacebar{
+    width:200px;
+    height:23px;
+    background: url(image/space.png) top center no-repeat;
+    position: relative;
+    left: 315px;
+}
+.control{
+    width: 45px;
+    height: 18px;
+    position: relative;
+    top: 2px;
+    left: 131px;
+}
+.spacer{
+    width:16px;
+    height:17px;
+    background: url(image/spacer.png) top center no-repeat;
+    position: relative;
+    top: -16px;
+    left: 0;
+}
+.ocenka{
+    width: 222px;
+    height: 61px;
+    background: transparent;
+    position: relative;
+    left: 303px;
+}
+/*.score{
+    width:200px;
+    height:50px;
+    font-size: 20pt;
+    font-family: Segoe Light, "Segoe UI Light", "Myriad Pro", sans-serif;
+    color: whitesmoke;
+    position: fixed;
+    bottom: -13px;
+    right:5%;
+    background: blueviolet;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    -moz-box-shadow: 0px 0px 2px #000000;
+    -webkit-box-shadow: 0px 0px 2px #000000;
+    box-shadow: 0px 0px 2px #000000;
+}
+*/
+.lvl {
+    width: 138px;
+    height: 31px;
+    background: url(image/lvl.png) top center no-repeat;
+    position: relative;
+    top: 118px;
+    left: 81px;
+    z-index: 500;
+}
+.lvlnum{
+    width: 36px;
+    height: 31px;
+    position: relative;
+    top: 88px;
+    left: 212px;
+}
