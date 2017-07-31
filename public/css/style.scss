@@ -88,6 +88,78 @@ body {
 
 /* close commented backslash hack */
 
+ul.pagination {
+  .disabled {
+    background: transparent !important;
+  }
+  .active {
+    background: #333;
+    color: #eee;
+  }
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    text-align: center;
+    background: #eee;
+    border-radius: 3px;
+    height: 37px;
+    line-height: 37px;
+
+    &:hover {
+      background: #333;
+      color: #eee;
+
+      a {
+        color: #eee;
+
+      }
+    }
+    a {
+      color: #333;
+      font: 14px 'Proxima Nova Semibold';
+      display: block;
+      text-decoration: none;
+      width: inherit;
+      height: 37px;
+
+      line-height: 37px;
+    }
+  }
+
+}
+
+.sunduk {
+  position: absolute;
+  top: 264px;
+  left: 50%;
+  margin-left: -605px;
+  background: url(/img/chest.png) center;
+  width: 199px;
+  height: 176px;
+  z-index: 999;
+  cursor: pointer;
+
+  .sunduk_after {
+    text-align: center;
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    background: rgba(182, 87, 0, 0.87);
+    padding: 5px 0;
+    border-radius: 3px;
+    top: 50%;
+    margin-top: 5px;
+    color: white;
+    font-family: 'Proxima Nova Bold';
+  }
+
+}
+
 .button {
   border-radius: 3px;
   box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.31);
@@ -159,7 +231,7 @@ menu {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1006;
   .logo {
     float: left;
   }
@@ -180,6 +252,36 @@ menu {
     list-style: none;
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+#versus{
+  text-decoration: none;
+  color: inherit;
+}
+.tourninrs {
+  background: url(/img/vs.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -430px;
+  top: 288px;
+  background-size: contain;
+  z-index: 999;
+
+  span{
+    position: absolute;
+    width: 100px;
+    padding: 5px 0;
+    background: rgb(188, 3, 43);
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    font-family: 'Proxima Nova Bold';
+    top: 100px;
+
+
   }
 }
 

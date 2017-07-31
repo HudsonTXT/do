@@ -68,3 +68,9 @@ Route::get('/check2', 'SocialApi@check');
 Route::get('rating', 'DORating@all');
 Route::get('/shop', 'Shop@show');
 Route::get('/shop/buy/{id}', 'Shop@buy');
+
+Route::get('chest/dialy', 'Chest@dialy');
+
+Route::get('/admin', 'Admin@index');
+Route::get('/admin/users', 'Admin@usersIndex');
+Route::get('/admin/users/edit/{id}', 'Admin@userEdit');

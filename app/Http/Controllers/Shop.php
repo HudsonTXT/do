@@ -50,6 +50,8 @@ class Shop extends Controller
                 }
                     $addItems = DB::table('do_user_items')->insert(
                         ['uid' => $userinfo->id, 'item_id' => $id, 'ended' => DB::raw('DATE_ADD(NOW(), INTERVAL '.$itemInfo->days.' DAY)')]);
+                DB::table('do_user')->where('id', $userinfo->id)->decrement('coins', $itemInfo->price);
+
                     if($addItems){
                         $msg = 'Спасибо за покупку! <3';
                     }else{

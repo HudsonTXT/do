@@ -149,6 +149,7 @@ class DOApi extends Controller
         $this->validate($request, [
             'auth' => 'required'
         ]);
+        $isOk = false;
         $vk = $request->auth;
         $vkCheckString = 'expire=' . $vk['expire'] . 'mid=' . $vk['mid'] . 'secret=' . $vk['secret'] . 'sid=' . $vk['sid'] . 'lQRD2OWwdElGhhteeMyF';
         if (md5($vkCheckString) == $vk['sig']) {
@@ -163,16 +164,20 @@ class DOApi extends Controller
                 );
                 $result = DB::table('do_user')->where('id', $id)->first();
                 //insert and session start
-
+                $isOk = true;
             } else {
-                $goToNew = DB::table('do_user')->where('mid', $vk['user']['id'])->update(array('name' => $vk['user']['first_name'], 'last' => $vk['user']['last_name'], 'href' => $vk['user']['href']));
-                if ($goToNew) {
-                    $result = DB::table('do_user')->where('mid', $vk['user']['id'])->first();
+                if($result->usergroup >= 2){ // testers = 3, admins = 2
+                    $goToNew = DB::table('do_user')->where('mid', $vk['user']['id'])->update(array('name' => $vk['user']['first_name'], 'last' => $vk['user']['last_name'], 'href' => $vk['user']['href']));
+                    if ($goToNew) {
+                        $result = DB::table('do_user')->where('mid', $vk['user']['id'])->first();
+                    }
+                    $isOk = true;
                 }
 
 
+
             }
-            $isOk = true;
+
             Session::put('user', $result);
         } else {
             $isOk = false;
@@ -252,13 +257,17 @@ class DOApi extends Controller
                 'coins' => \DB::raw('coins + ' . $coins),
             ]);
 
+            $songRating = DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')->select('do_log.score', 'do_user.name', 'do_user.last')->where('do_log.song_id', $request->input('song_id'))->groupby('uid')->orderby('do_log.score', 'desc')->limit(5)->get();
+
+
+
             //DB::update("UPDATE do_user SET coins = coins + $coins, exp = exp + $exp WHERE id = $r[uid]");
             $songInfo = DB::table('do_music')->where('id', $request->input('song_id'))->first();//("SELECT * FROM do_music WHERE id = $r[song_id]")->fetch_assoc();
             //return response()->json($songInfo);
             //DOApi::activity(1, 'Вы станцевали ' . $songInfo->author . ' - ' . $songInfo->name . '. Кристаллы +' . $coins . ', опыт +' . DOApi::number_format_short($exp));
             $this->plusExp($exp);
 
-            $alert = array('exp' => $exp, 'coins' => $coins);
+            $alert = array('exp' => $exp, 'coins' => $coins, 'rating' => $songRating);
             return response()->json($alert);
 
         }

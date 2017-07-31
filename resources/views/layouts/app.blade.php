@@ -12,7 +12,8 @@
     <script src="{{asset('js/modules.js')}}"></script>
     <script>
         var vkId = {{$u->mid}};
-
+        var chest = '{{$u->chest}}';
+        var tournirs = '{{$u->end_day}}';
 
 
     </script>
@@ -24,6 +25,7 @@
     <div class="wrap">
         <li>
             <a href="http://fandance.ru"><img src="/img/logo.png" alt="" class="logo"></a>
+
         </li>
         @if($new)
             <li class="activity_menu animated wobble infinite">
@@ -62,6 +64,15 @@
     </div>
 
 </menu>
+<div class="sunduk">
+    @if($u->chest != 'ready')
+<div class="sunduk_after" title="Сундук откроется через...">
+    <span></span>
+</div>
+    @endif
+</div>
+
+<a href="#" id="versus"><div class="tourninrs" title="До конца турнира осталось..."><span></span></div></a>
 <div class="body__bg">
 
 
@@ -85,6 +96,9 @@
                 <div class="sidebar_menu__item"><a href="/rating"><img src="{{asset('img/exp.svg')}}" alt="">Рейтинг</a></div>
                 <div class="sidebar_menu__item"><a href="/shop"><img src="{{asset('img/store.svg')}}" alt="">Магазин</a></div>
                 <div class="sidebar_menu__item"><a href="/rating"><img src="{{asset('img/exp.svg')}}" alt="">Задания</a></div>
+                @if($u->usergroup == 2)
+                <div class="sidebar_menu__item"><a href="/admin"><img src="{{asset('img/exp.svg')}}" alt="">Управление</a></div>
+                    @endif
             </div>
 
         </div>

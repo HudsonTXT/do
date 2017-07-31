@@ -1,0 +1,17 @@
+.user{
+  a{
+    text-decoration: none;
+  }
+  &:first-child{
+    background: #eee;
+  }
+  padding:0 10px;
+  .user_name{
+    width: 70%;
+  }
+
+  .user_coins, .user_exp{
+    width: 14%;
+    text-align: center;
+  }
+}

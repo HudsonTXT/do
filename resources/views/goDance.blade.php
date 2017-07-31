@@ -102,8 +102,17 @@
 </div>
 <div class="result">
     <div class="result_head">
-        <div class="result_song">{{$song->author}} - {{$song->name}}</div>
-        <div class="result_bpm">{{$song->bpm}} BPM</div>
+        <div class="result-song-info">
+            <div class="result_song">{{$song->author}} - {{$song->name}}</div>
+            <div class="result_bpm">{{$song->bpm}} BPM</div>
+        </div>
+        <div class="result-other-rating">
+            <div class="rating-head">ТОП - 5</div>
+            <div class="rating_peoples">
+
+            </div>
+        </div>
+
     </div>
     <div class="result_info">
         <div class="result_part"></div>

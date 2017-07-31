@@ -58,7 +58,7 @@ class VKUsers extends Controller
                 return redirect('/');
             }
             if (Session::has('user')) {
-                $userinfo = DB::select('select u.*, s.name as status_name, s.color as status_color, max(l.lvl) as lvl, 
+                $userinfo = DB::select('select u.*, s.name as status_name, s.color as status_color, max(l.lvl) as lvl, (SELECT CURRENT_TIMESTAMP) as time, (SELECT DATE_FORMAT( NOW( ) ,  "%Y-%m-%d 23:59:59" )) as end_day,
 COALESCE((
     
 select sum(i.value) 
@@ -68,19 +68,42 @@ where doi.uid = u.id and i.type = \'exp_bonus\' AND ended > CURRENT_TIMESTAMP
     
 ),0) as exp_bonus,
 COALESCE((
-
-    select sum(i.value) 
+select sum(i.value) 
 from do_user_items doi 
 JOIN do_items i ON doi.item_id = i.id
 where doi.uid = u.id and i.type = \'dmn_bonus\' AND ended > CURRENT_TIMESTAMP
     
 
-),0) as dmn_bonus
+), 0) as dmn_bonus,
+COALESCE((
+
+SELECT DATE_ADD(c.opened_at, INTERVAL 3 HOUR)
+    FROM do_user_chest c
+    WHERE c.uid = u.id 
+    
+    
+
+),\'none\') as dialy_chest
 from do_user u
 join do_levels l
 JOIN do_user_status s ON u.status = s.id 
 
-WHERE u.id =?  AND u.exp >= l.exp', [Session::get('user')->id])[0];
+WHERE u.id = ?  AND u.exp >= l.exp', [Session::get('user')->id])[0];
+                $userinfo->time = strtotime($userinfo->time);
+                if($userinfo->dialy_chest == 'none'){
+                    $userinfo->chest = 'ready';
+                }else{
+
+                    $userinfo->dialy_chest = strtotime($userinfo->dialy_chest);
+                    if($userinfo->time > $userinfo->dialy_chest){
+                        $userinfo->chest = 'ready';
+                    }else{
+                        $userinfo->chest = $userinfo->dialy_chest - $userinfo->time;
+                    }
+                    //covert to unix $userinfo->time
+                    //convert to unix $userinfo->dialy_chest
+                }
+
                 /*
                  * select u.*, s.name as status_name, s.color as status_color, max(l.lvl) as lvl, sum(pow.`value`)
     from do_user u
@@ -105,7 +128,13 @@ LIMIT 0 , 5');
                     $newActs = true;
                 }
             }
-            self::$a = array('act' => $act, 'new' => $newActs, 'user' => $userinfo);
+            $userinfo->end_day = strtotime($userinfo->end_day)-$userinfo->time;
+            if($userinfo->usergroup >= 2){ //testers = 3, admins = 2
+                self::$a = array('act' => $act, 'new' => $newActs, 'user' => $userinfo);
+            }else{
+                Session::flush();
+            }
+
         } else {
             Session::flush();
         }

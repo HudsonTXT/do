@@ -359,6 +359,7 @@ body {
 .ar {
   width: 38px;
   height: 47px;
+  margin:0 1.5px;
   display: inline-block;
   vertical-align: middle;
   animation: zoomIn .2s;
@@ -366,42 +367,75 @@ body {
 
 .right {
   background: url(image/right.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .rightkl {
   background: url(image/rightkl.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .up {
   background: url(image/up.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .down {
   background: url(image/down.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .left {
   background: url(image/left.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .upkl {
   background: url(image/upkl.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .downkl {
   background: url(image/downkl.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 
 .leftkl {
   background: url(image/leftkl.png) top center no-repeat;
-  transition: all .3s linear;
+  transition: all .1s linear;
+}
+.rating-head {
+  background: rgba(255, 255, 255, 0.18);
+}
+.rating_peoples {
+  font-size: 13px;
+}
+.result-song-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+  margin-left: 40px;
+}
+
+.result-other-rating {
+  width: 200px;
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 50px;
+  span.fio {
+    width: 66%;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+  }
+  span.score {
+    width: 33%;
+    display: inline-block;
+    text-align: right;
+  }
 }
 
 .dance {

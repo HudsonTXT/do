@@ -86,6 +86,10 @@ $(function () {
                             //some info after sending
                             $('#coins').text('Кристаллы +' + json.coins);
                             $('#exp').text('Опыт +' + json.exp);
+                            $.each(json.rating, function(i, val){
+                                $('.rating_peoples').append('<div class="rating_people"><span class="fio">'+val.name+' '+val.last+'</span><span class="score">'+val.score+'</span></div>');
+                            });
+
                         }, 'json');
                     }
 
