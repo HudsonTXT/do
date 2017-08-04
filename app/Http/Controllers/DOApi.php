@@ -238,7 +238,7 @@ class DOApi extends Controller
             }
             $parts = $request->input('parts');
             DB::table('do_log')->insert(
-                array('uid' => Session::get('user')->id,
+                ['uid' => Session::get('user')->id,
                     'song_type' => $request->input('song_type'),
                     'song_id' => $request->input('song_id'),
                     'score' => $request->input('points'),
@@ -249,7 +249,7 @@ class DOApi extends Controller
                     'bad' => $parts['b'],
                     'miss' => $parts['m'],
                     'coins' => $coins,
-                )
+                ]
             );
             //$insertLog = DB::insert("INSERT INTO do_log (uid, song_type, song_id, score, exp, perf, cool, good, bad, miss, coins)
             //VALUES ('$r[uid]', '$r[song_type]', '$r[song_id]', '$r[points]', '$exp', '$parts[p]', '$parts[c]', '$parts[g]', '$parts[b]', '$parts[m]', '$coins')");
@@ -257,7 +257,10 @@ class DOApi extends Controller
                 'coins' => \DB::raw('coins + ' . $coins),
             ]);
 
-            $songRating = DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')->select('do_log.score', 'do_user.name', 'do_user.last')->where('do_log.song_id', $request->input('song_id'))->groupby('uid')->orderby('do_log.score', 'desc')->limit(5)->get();
+            $songRating = DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')
+                ->select(DB::raw('max(do_log.score) as score'), 'do_user.name', 'do_user.last')
+                ->where('do_log.song_id', $request->input('song_id'))->groupby('do_log.uid')
+                ->orderby('score', 'desc')->limit(5)->get();
 
 
 

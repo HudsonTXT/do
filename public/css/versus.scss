@@ -1,0 +1,156 @@
+.versus{
+  .block_content{
+    padding: 10px;
+    box-sizing: border-box;
+
+    &.leaderboard{
+      width: 290px;
+      text-align: center;
+      float: left;
+      height: 360px;
+      padding: 50px 10px;
+      a{
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+    &.leadertable{
+      margin-left: 300px;
+      width: 517px;
+      height: 360px;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+  .versus_timer{
+    text-align: center;
+  }
+  #timer_head, #timer_time{
+    font: 31px 'Proxima Nova Bold';
+    display: block;
+  }
+  span#timer_time {
+    margin-top: -5px;
+    font-size: 50px !important;
+  }
+  .versus_leader{
+    width: 280px;
+    text-align: center;
+    float: left;
+    text-align: center;
+    font: 18px 'Proxima Nova Bold';
+
+    img{
+      margin: 10px 0;
+      border-radius: 100%;
+    }
+
+    #leader{
+      font-size: 24px;
+    }
+  }
+  .versus_table{
+    text-align: center;
+
+    span{
+      font: 18px 'Proxima Nova Bold';
+      display: block;
+      margin-bottom: 10px;
+
+    }
+    .leadertable_num{
+      width: 10%;
+      text-align: center;
+    }
+
+    .leadertable_fio{
+      width: 75%;
+      text-align: center;
+      margin: 0 -5px;
+    }
+
+    .leadertable_score{
+      width: 15%;
+      text-align: center;
+    }
+    .leadertable_info{
+      background: #eee;
+      .block__separator {
+        font-family: 'Proxima Nova Bold';
+      }
+    }
+
+  }
+  .goto{
+    text-align: center;
+
+    #goto_desc{
+      font: 18px 'Proxima Nova Bold';
+    }
+    #goto_song{
+      font: 24px 'Proxima Nova Bold';
+      margin: 10px 0;
+    }
+    a{
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+  .prizes{
+    text-align: center;
+    font: 18px 'Proxima Nova Bold';
+    width: 400px;
+    float: left;
+    text-align: center;
+    .block_element{
+      text-align: center;
+    }
+    .prizes_num{
+      width: 15%;
+      text-align: center;
+    }
+    .prizes_items{
+      width: 85%;
+      margin-left: -5px;
+      text-align: left;
+      word-spacing: 15px;
+      img{
+        max-width: 40px;
+        max-height: 40px;
+        vertical-align: middle;
+
+      }
+    }
+  }
+    .history{
+      width: 407px;
+      margin-left: 410px;
+      text-align: center;
+      font: 18px 'Proxima Nova Bold';
+
+      .history_num{
+        width: 10%;
+        text-align: center;
+      }
+
+      .history_fio{
+        width: 75%;
+        text-align: center;
+        margin: 0 -5px;
+      }
+
+      .history_score{
+        width: 15%;
+        text-align: center;
+      }
+      .history_info{
+        background: #eee;
+        .block__separator {
+          font-family: 'Proxima Nova Bold';
+        }
+      }
+    }
+}

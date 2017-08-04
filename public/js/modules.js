@@ -97,12 +97,14 @@ $(function(){
         }
     });
     $('.tourninrs span').text(tournirs.toString().toHHMMSS());
+    $('#timer_time').text(tournirs.toString().toHHMMSS());
     tournirs--;
     setInterval(function(){
         if(tournirs <= 0){
             tournirs = 24*3600;
         }
         $('.tourninrs span').text(tournirs.toString().toHHMMSS());
+        $('#timer_time').text(tournirs.toString().toHHMMSS());
         tournirs--;
     }, 1000);
 });

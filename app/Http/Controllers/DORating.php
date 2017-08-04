@@ -48,8 +48,8 @@ class DORating extends Controller
         $userinfo = $this->userinfo['user'];
         $this->userinfo['user']->coins = DOApi::number_format_short($this->userinfo['user']->coins);
         $this->userinfo['user']->exp = DOApi::number_format_short($this->userinfo['user']->exp);
-        $rich = DB::table('do_user')->orderby('coins', 'desc')->limit(10)->get();
-        $exp = DB::select('select do_user.*, max(do_levels.lvl) as lvl from do_user join do_levels WHERE do_user.exp >= do_levels.exp group by do_user.id order by lvl desc limit 10');
+        $rich = DB::table('do_user')->orderby('coins', 'desc')->limit(5)->get();
+        $exp = DB::select('select do_user.*, max(do_levels.lvl) as lvl from do_user join do_levels WHERE do_user.exp >= do_levels.exp group by do_user.id order by lvl desc limit 5');
         //return response()->json($exp);
         $photo_50 = array();
         foreach ($rich as $k=>$r){

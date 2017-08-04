@@ -72,7 +72,7 @@
     @endif
 </div>
 
-<a href="#" id="versus"><div class="tourninrs" title="До конца турнира осталось..."><span></span></div></a>
+<a href="/versus" id="versus"><div class="tourninrs" title="До конца турнира осталось..."><span></span></div></a>
 <div class="body__bg">
 
 
@@ -92,13 +92,11 @@
             </div>
             <div class="sidebar_menu">
                 <div class="sidebar_menu__item"><a href="/dance"><img src="{{asset('img/disco.svg')}}" alt="">Танцпол</a></div>
+                <div class="sidebar_menu__item"><a href="/versus"><img src="{{asset('img/trophy.svg')}}" alt="">Турнир</a></div>
                 <div class="sidebar_menu__item"><a href="/profile"><img src="{{asset('img/profile.svg')}}" alt="">Профиль</a></div>
                 <div class="sidebar_menu__item"><a href="/rating"><img src="{{asset('img/exp.svg')}}" alt="">Рейтинг</a></div>
                 <div class="sidebar_menu__item"><a href="/shop"><img src="{{asset('img/store.svg')}}" alt="">Магазин</a></div>
-                <div class="sidebar_menu__item"><a href="/rating"><img src="{{asset('img/exp.svg')}}" alt="">Задания</a></div>
-                @if($u->usergroup == 2)
-                <div class="sidebar_menu__item"><a href="/admin"><img src="{{asset('img/exp.svg')}}" alt="">Управление</a></div>
-                    @endif
+
             </div>
 
         </div>
