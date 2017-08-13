@@ -285,6 +285,45 @@ menu {
   }
 }
 
+
+.footer{
+  text-align: center;
+  width: 100%;
+  height: 280px;
+  background: #333;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 20px;
+.footer_c{
+  display: inline-block;
+  vertical-align: top;
+  width: 285px;
+  margin: 0 -2px;
+  text-align: left;
+}
+  a.c_link{
+    text-decoration: underline !important;
+  }
+  .c_name{
+    font: 16px 'Proxima Nova Bold';
+    margin-bottom: 15px;
+  }
+
+  li{
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Proxima Nova Semibold';
+  }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+
+    }
+}
 .block {
   width: 100%;
   .block__separator {

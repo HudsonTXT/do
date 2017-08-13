@@ -144,21 +144,21 @@
 <section id="footer">
     <div class="wrap">
         <div class="f-column">
-            <a href="#">Главная</a>
-            <a href="#">О сервисе</a>
-            <a href="#">Музыка</a>
-            <a href="#">Преимущества</a>
-            <a href="#">С чего начать?</a>
-            <a href="#">Помощь</a>
-            <a href="#">Предложить песню</a>
-            <a href="#">Отзыв</a>
+            <a href="/">Главная</a>
+            <a href="#about">О сервисе</a>
+            <a href="#music">Музыка</a>
+            <a href="#features">Преимущества</a>
+            <a href="#howtostart">С чего начать?</a>
+            <a href="https://vk.com/topic-55487263_36089582" target="_blank">Помощь</a>
+            <a href="https://vk.com/topic-55487263_36089582" target="_blank">Предложить песню</a>
+            <a href="https://vk.com/topic-55487263_36089582" target="_blank">Отзыв</a>
         </div>
         <div class="f-column">
-            <a href="#">FanDance</a>
-            <a href="#">Новости</a>
-            <a href="#">Каталог игр</a>
-            <a href="#">Форум</a>
-            <a href="#">Мы ВКонтакте</a>
+            <a href="http://fandance.ru" target="_blank">FanDance</a>
+            <a href="http://fandance.ru/news.php" target="_blank">Новости</a>
+            <a href="http://fandance.ru/games.php" target="_blank">Каталог игр</a>
+            <a href="http://forum.fandance.ru/" target="_blank">Форум</a>
+            <a href="https://vk.com/fan_dance" target="_blank">Мы ВКонтакте</a>
         </div>
         <div class="f-column">
             <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>

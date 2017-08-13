@@ -91,11 +91,11 @@
 
             </div>
             <div class="sidebar_menu">
-                <div class="sidebar_menu__item"><a href="/dance"><img src="{{asset('img/disco.svg')}}" alt="">Танцпол</a></div>
-                <div class="sidebar_menu__item"><a href="/versus"><img src="{{asset('img/trophy.svg')}}" alt="">Турнир</a></div>
                 <div class="sidebar_menu__item"><a href="/profile"><img src="{{asset('img/profile.svg')}}" alt="">Профиль</a></div>
-                <div class="sidebar_menu__item"><a href="/rating"><img src="{{asset('img/exp.svg')}}" alt="">Рейтинг</a></div>
+                <div class="sidebar_menu__item"><a href="/dance"><img src="{{asset('img/disco.svg')}}" alt="">Танцпол</a></div>
                 <div class="sidebar_menu__item"><a href="/shop"><img src="{{asset('img/store.svg')}}" alt="">Магазин</a></div>
+                <div class="sidebar_menu__item"><a href="/versus"><img src="{{asset('img/trophy.svg')}}" alt="">Турнир</a></div>
+                <div class="sidebar_menu__item"><a href="/rating"><img src="{{asset('img/exp.svg')}}" alt="">Рейтинг</a></div>
 
             </div>
 
@@ -105,6 +105,47 @@
 
         </div>
         <div class="clearfix"></div>
+    </div>
+
+</div>
+<div class="footer">
+    <div class="wrap">
+        <div class="footer_c">
+            <div class="c_name">DanceOnline!</div>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/profile">Профиль</a></li>
+            <li><a href="/dance">Танцпол</a></li>
+            <li><a href="/shop">Магазин</a></li>
+            <li><a href="/versus">Турнир</a></li>
+            <li><a href="/rating">Рейтинг</a></li>
+        </div>
+        <div class="footer_c">
+            <div class="c_name">Обратная связь</div>
+            <li><a href="https://vk.com/gim55487263" target="_blank">Администрациия</a></li>
+            <li><a href="https://vk.com/topic-55487263_36089582" target="_blank">Задать вопрос</a></li>
+            <li><a href="https://vk.com/topic-55487263_36089582" target="_blank">Предложить трек</a></li>
+            <li><a href="https://vk.com/topic-55487263_36089582" target="_blank">Отзыв</a></li>
+            <li><a href="https://vk.com/topic-55487263_36089582" target="_blank">Пожелание</a></li>
+            <li><a href="https://vk.com/topic-55487263_36089582" target="_blank">Предложение</a></li>
+        </div>
+        <div class="footer_c">
+            <div class="c_name">Акция</div>
+            Нравится приложение?<br>
+            Напиши отзыв и получи подарок! <br>
+            В отзыве ты можешь написать свои впечатления, предложения а также поделиться любимой музыкой. <br>
+
+            <br>
+            <a href="https://vk.com/topic-55487263_36089582" class="c_link" target="_blank">Оставить отзыв</a>
+        </div>
+
+        <div class="footer_c">
+
+            <!-- VK Widget -->
+            <div id="vk_groups"></div>
+            <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {mode: 3, width: "280", color1: '333', color2: 'FFF', color3: 'D0D0D0'}, 55487263);
+            </script>
+        </div>
     </div>
 </div>
 </body>

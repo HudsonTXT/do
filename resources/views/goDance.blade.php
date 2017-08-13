@@ -37,6 +37,7 @@
 </div>
 <div class="loader">
     <img src="{{asset('dance_media/image/logo2.png')}}" align="center" width="400"/>
+
 </div>
 <div class="on_load_inputs">
     <div class="ocenka perfect"></div>

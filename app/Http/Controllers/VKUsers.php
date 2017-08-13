@@ -129,7 +129,7 @@ LIMIT 0 , 5');
                 }
             }
             $userinfo->end_day = strtotime($userinfo->end_day)-$userinfo->time;
-            if($userinfo->usergroup >= 2){ //testers = 3, admins = 2
+            if($userinfo->usergroup >= 1){ //testers = 3, admins = 2
                 self::$a = array('act' => $act, 'new' => $newActs, 'user' => $userinfo);
             }else{
                 Session::flush();

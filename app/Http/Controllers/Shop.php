@@ -49,7 +49,7 @@ class Shop extends Controller
                     $itemInfo->days = '3650'; //86400
                 }
                     $addItems = DB::table('do_user_items')->insert(
-                        ['uid' => $userinfo->id, 'item_id' => $id, 'ended' => DB::raw('DATE_ADD(NOW(), INTERVAL '.$itemInfo->days.' DAY)')]);
+                        ['uid' => $userinfo->id, 'item_id' => $itemInfo->item_id, 'ended' => DB::raw('DATE_ADD(NOW(), INTERVAL '.$itemInfo->days.' DAY)')]);
                 DB::table('do_user')->where('id', $userinfo->id)->decrement('coins', $itemInfo->price);
 
                     if($addItems){

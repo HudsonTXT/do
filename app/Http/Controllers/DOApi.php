@@ -166,7 +166,7 @@ class DOApi extends Controller
                 //insert and session start
                 $isOk = true;
             } else {
-                if($result->usergroup >= 2){ // testers = 3, admins = 2
+                if($result->usergroup >= 1){ // testers = 3, admins = 2
                     $goToNew = DB::table('do_user')->where('mid', $vk['user']['id'])->update(array('name' => $vk['user']['first_name'], 'last' => $vk['user']['last_name'], 'href' => $vk['user']['href']));
                     if ($goToNew) {
                         $result = DB::table('do_user')->where('mid', $vk['user']['id'])->first();

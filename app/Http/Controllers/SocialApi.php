@@ -101,7 +101,7 @@ WHERE u.id =?  AND u.exp >= l.exp ', [$id])[0];
             $nextLvl = 0;
         }
         $medals = DB::select('select i.* from do_user_items dum 
-JOIN do_items i
+JOIN do_items i ON dum.item_id = i.id
 where uid = ? and ended > CURRENT_TIMESTAMP and  i.type = \'medals\'', [$id]);
         $lvlPercent['now'] = $user->maxExp;
         $lvlPercent['next'] = $nextLvl;
