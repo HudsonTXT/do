@@ -36,7 +36,10 @@
     </div>
 </div>
 <div class="loader">
-    <img src="{{asset('dance_media/image/logo2.png')}}" align="center" width="400"/>
+    <div class="loader-inner">
+        <img src="{{asset('dance_media/image/logo2.png')}}" align="center" width="400"/>
+        <div>Нажми клавишу Home, чтобы скрыть фон.</div>
+    </div>
 
 </div>
 <div class="on_load_inputs">
@@ -173,7 +176,7 @@
 </div>
 
 
-<script src="{{asset('dance_media/danceByMe.js')}}"></script>
+<script src="{{asset('dance_media/danceByMe.js')}}?v=3"></script>
 <script>
     var tag = document.createElement('script');
 

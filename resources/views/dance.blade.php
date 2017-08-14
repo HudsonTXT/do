@@ -82,5 +82,6 @@
 
         </div>
         <div class="button godance">Танцевать</div>
+        <span class="button__description">Нажми клавишу Home, чтобы скрыть фон во время танца.</span>
     </div>
 @endsection

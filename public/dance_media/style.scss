@@ -1,5 +1,5 @@
 body {
-  background: #16124c url(image/bg_play.jpg) no-repeat center;
+  background: url("/dance_media/image/bg2.jpg") center;
   font-family: 'Proxima Nova';
   margin: 0;
   height: 100vh;
@@ -540,6 +540,7 @@ body {
   padding: 0;
   position: absolute;
   text-align: center;
+  color: #fff;
 }
 
 @-webkit-keyframes button {
@@ -578,7 +579,7 @@ body {
   }
 }
 
-.loader img {
+.loader-inner {
   top: 50%;
   position: relative;
   margin-top: -91.5px;

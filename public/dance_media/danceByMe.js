@@ -276,6 +276,9 @@ $(function () {
             var arr0 = "right";
             buttons(arr0);
         }
+        if (key == "Home") {
+            $('.video-bg').remove();
+        }
         if (key == ' ' || key == 'Control') {
             if (barSpace == 0) {
                 spacebar();
