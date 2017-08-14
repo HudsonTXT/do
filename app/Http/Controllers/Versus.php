@@ -50,12 +50,13 @@ class Versus extends Controller
 (SELECT CONCAT(do_music.author, \' - \', do_music.name) FROM do_music WHERE do_music.id = song_id) as song_name,
 (SELECT CONCAT(do_music.author, \' - \', do_music.name) FROM do_music WHERE do_music.id = tomorrow_song_id) as tomorrow_song_name')[0];
         if($versusSong->tomorrow_song_id > 0){
-            $allVersuses = DB::select('SELECT uid FROM do_log WHERE DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\') = CURDATE() - INTERVAL 1 DAY AND song_id = '.$versusSong->tomorrow_song_id.' GROUP BY uid');
+            $allVersuses = DB::select('SELECT uid FROM do_log WHERE DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\') = CURDATE() - INTERVAL 1 DAY AND versus = 1 AND song_id = '.$versusSong->tomorrow_song_id.' GROUP BY uid');
             $allVersuses = count($allVersuses);
 
             $getLog = DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')
                 ->select(DB::raw('sum(do_log.score) as score'), 'do_user.name', 'do_user.last', 'do_user.mid', 'do_user.id')
                 ->where([
+                    ['do_log.versus', '=', true],
                     ['do_log.song_id', '=', $versusSong->tomorrow_song_id],
                     [DB::raw('DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\')'), '=', DB::raw('CURDATE() - INTERVAL 1 DAY')],
                 ])->groupby('do_log.uid')->orderby('score', 'desc')->limit(5)->get();
@@ -82,7 +83,7 @@ class Versus extends Controller
                 }
             }
         }
-
+            DB::table('do_user')->update(['versus_hearts' => 7]);
 
 
 
@@ -99,7 +100,7 @@ class Versus extends Controller
          * */
         $versusSong = DB::select('SELECT  (SELECT song_id FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE()) as song_id, 
 (SELECT COALESCE(song_id,0) FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE() - INTERVAL 1 DAY) as tomorrow_song_id,
-(SELECT COALESCE(sum(do_log.score),0) from do_log where uid = '.$this->userinfo['user']->id.' AND DATE_FORMAT(danced_at, \'%Y-%m-%d\') = CURDATE() AND do_log.song_id = ((SELECT song_id FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE()))) as user_score, 
+(SELECT COALESCE(sum(do_log.score),0) from do_log where uid = '.$this->userinfo['user']->id.' AND DATE_FORMAT(danced_at, \'%Y-%m-%d\') = CURDATE() AND do_log.versus = 1 AND do_log.song_id = ((SELECT song_id FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE()))) as user_score, 
 (SELECT CONCAT(do_music.author, \' - \', do_music.name) FROM do_music WHERE do_music.id = song_id) as song_name,
 (SELECT CONCAT(do_music.author, \' - \', do_music.name) FROM do_music WHERE do_music.id = tomorrow_song_id) as tomorrow_song_name')[0];
         /*
@@ -116,11 +117,12 @@ limit 5
 if(!$versusSong->song_id){
     return 'Подведение результатов... Пожалуйста, зайдите позже.';
 }
-        $allVersuses = DB::select('SELECT uid FROM do_log WHERE DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\') = CURDATE() AND song_id = '.$versusSong->song_id.' GROUP BY uid');
+        $allVersuses = DB::select('SELECT uid FROM do_log WHERE DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\') = CURDATE() AND versus = 1 AND  song_id = '.$versusSong->song_id.' AND versus = true GROUP BY uid');
         DB::enableQueryLog();
         $getLog = DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')
             ->select(DB::raw('sum(do_log.score) as score'), 'do_user.name', 'do_user.last', 'do_user.mid', 'do_user.id')
             ->where([
+                ['do_log.versus', '=', true],
                 ['do_log.song_id', '=', $versusSong->song_id],
                 [DB::raw('DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\')'), '=', DB::raw('CURDATE()')],
             ])->groupby('do_log.uid')->orderby('score', 'desc')->limit(5)->get();
@@ -132,6 +134,7 @@ if(!$versusSong->song_id){
         $getLogTomorrow = DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')
             ->select(DB::raw('sum(do_log.score) as score'), 'do_user.name', 'do_user.last', 'do_user.mid', 'do_user.id')
             ->where([
+                ['do_log.versus', '=', true],
                 ['do_log.song_id', '=', $versusSong->tomorrow_song_id],
                 [DB::raw('DATE_FORMAT(do_log.danced_at, \'%Y-%m-%d\')'), '=', DB::raw('CURDATE() - INTERVAL 1 DAY')],
             ])->groupby('do_log.uid')->orderby('score', 'desc')->limit(5)->get();

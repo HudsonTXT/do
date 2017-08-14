@@ -21,8 +21,9 @@
 @section('content')
     <div class="block versus">
         <div class="block_header">Ежедневный турнир</div>
-        <div class="block_description">Каждый день проходит турнир. Для участия, необходимо станцевать под трек,
-            указанный ниже. Результаты подводятся в 24 часа. Победителем считается тот, кто набрал большую сумму очков.
+        <div class="block_description">Для участия, необходимо станцевать под трек,
+            указанный ниже. Результаты подводятся раз в 24 часа. Победителем считается тот, кто набрал большую сумму очков.
+            У каждого пользователя 7 попыток в день.
         </div>
         <div class="block_content">
             <div class="versus_timer">
@@ -35,12 +36,18 @@
         Для участия в турнире станцуй под песню:
         </span>
             <div id="goto_song">{{$v->song_name}}</div>
-            <a href="/dance/go/{{$v->song_id}}">
+            @if($u->versus_hearts > 0)
+            <a href="/dance/versus">
+
                 <div class="button">Участвовать</div>
             </a>
+            @endif
+
             @if(count($l))
             Твои очки: {{$v->user_score}}
+                <br>
                 @endif
+            Попытки: {{$u->versus_hearts}}
         </div>
         @if(count($l))
         <div class="block_content leaderboard">

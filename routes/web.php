@@ -57,16 +57,25 @@ Route::get('api/songs', 'DOApi@songs');
 Route::get('api/tutorialEnd', 'DOApi@tutorialEnd');
 Route::get('api/activity', 'DOApi@getActivity');
 Route::get('/dance/go/{id?}', 'DOApi@go');
+Route::get('/dance/versus', 'DOApi@versus');
+Route::get('/dance/dance.js', 'DOApi@danceJs');
+
 //Route::get('/profile/', 'SocialApi@mainProfile');
 Route::get('/profile/{id?}', 'SocialApi@anotherProfile');
 Route::get('/exp/{exp?}', 'DOApi@getExp'); //DELETE THIS
 Route::get('api/checkAct', 'DOApi@checkAct');
 
-Route::get('check/{id}', function($id){
+/*Route::get('check/{id}', function($id){
     return response()->json(DB::table('do_log')->join('do_user', 'do_user.id', '=', 'do_log.uid')->select(DB::raw('max(do_log.score) as score'), 'do_user.name', 'do_user.last')->where('do_log.song_id', $id)->groupby('do_log.uid')->orderby('score', 'desc')->limit(5)->get());
 });
+Route::get('check/{uid}/{exp}/{money}', function ($uid, $exp, $money){
+    Controllers\Versus::getExpAndMoney($uid, $exp, $money);
+});
+
 Route::get('/check2', 'SocialApi@check');
+*/
 Route::get('rating', 'DORating@all');
+
 Route::get('/shop', 'Shop@show');
 Route::get('/shop/buy/{id}', 'Shop@buy');
 
@@ -74,9 +83,7 @@ Route::get('chest/dialy', 'Chest@dialy');
 Route::get('versus/', 'Versus@index');
 Route::get('versus/lovefandanceru/update', 'Versus@cron');
 
-Route::get('check/{uid}/{exp}/{money}', function ($uid, $exp, $money){
-    Controllers\Versus::getExpAndMoney($uid, $exp, $money);
-});
+
 
 
 

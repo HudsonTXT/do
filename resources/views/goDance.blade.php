@@ -25,6 +25,13 @@
         var song_id = {{$song->id}};
     </script>
     <link rel="stylesheet" href="{{asset('dance_media/style.css')}}" type="text/css"/>
+    @if($versus)
+        <style>
+            .loader {
+                background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+            }
+        </style>
+    @endif
 </head>
 <body>
 <div class="video-bg">
@@ -37,7 +44,11 @@
 </div>
 <div class="loader">
     <div class="loader-inner">
-        <img src="{{asset('dance_media/image/logo2.png')}}" align="center" width="400"/>
+        @if(!$versus)
+            <img src="{{asset('dance_media/image/logo2.png')}}" align="center" width="400"/>
+        @else
+            <img src="{{asset('dance_media/images/logo-battle.png')}}" align="center" width="400"/>
+        @endif
         <div>Нажми клавишу Home, чтобы скрыть фон.</div>
     </div>
 
@@ -58,7 +69,11 @@
     <div class="ar rightkl"></div>
 </div>
 <div class="dansez">
-    <center><img src="{{asset('dance_media/image/logo2.png')}}" height="224" style="margin-top:83px;"/></center>
+    @if(!$versus)
+        <center><img src="{{asset('dance_media/image/logo2.png')}}" align="center" height="224" style="margin-top:83px;"/></center>
+    @else
+        <center><img src="{{asset('dance_media/images/logo-battle.png')}}" align="center" height="244" style="margin-top:83px;"/></center>
+    @endif
     <div class="dance">
         <div class="lvl"></div>
         <div class="lvlnum"></div>
@@ -77,7 +92,8 @@
         <div class="song-info">
             <div class="counter-name">{{$song->author}}</div>
             <div class="counter-song">{{$song->name}}</div>
-            <div class="counter-time"><span id="time-current">00:00</span>/<span id="time-duration">{{$song->length}}</span></div>
+            <div class="counter-time"><span id="time-current">00:00</span>/<span
+                        id="time-duration">{{$song->length}}</span></div>
             <div class="counter-bpm">{{$song->bpm}}bpm</div>
         </div>
     </div>
@@ -86,9 +102,9 @@
         <div class="user-score" id="pt">0</div>
     </div>
     /*
-    <!--div class="info">
+<!--div class="info">
         <span class="time-bar"><span class="bar_inner"></span><span id="song-name">{{$song->author}}
-                - {{$song->name}}</span></span>
+        - {{$song->name}}</span></span>
         <span class="bpm"> [{{$song->bpm}} BPM]</span>
         <div class="score">Очки: <span id="pt">0</span><br/>
 
@@ -102,7 +118,7 @@
 
 
         </div-->
-    </div>
+</div>
 </div>
 <div class="result">
     <div class="result_head">
@@ -124,37 +140,37 @@
             <div class="result_avgs">
                 <div class="result_avg">
                     <div class="avg_part">
-                    <img src="/dance_media/image/perfect_min.png" height="17" alt="">
+                        <img src="/dance_media/image/perfect_min.png" height="17" alt="">
                     </div>
                     <span id="p">0</span>
                 </div>
                 <div class="result_avg">
                     <div class="avg_part">
-                    <img src="/dance_media/image/cool.png" height="17" alt="">
+                        <img src="/dance_media/image/cool.png" height="17" alt="">
                     </div>
                     <span id="c">0</span>
                 </div>
                 <div class="result_avg">
                     <div class="avg_part">
-                    <img src="/dance_media/image/good.png" height="17" alt="">
+                        <img src="/dance_media/image/good.png" height="17" alt="">
                     </div>
                     <span id="g">0</span>
                 </div>
                 <div class="result_avg">
                     <div class="avg_part">
-                    <img src="/dance_media/image/bad.png" height="17" alt="">
+                        <img src="/dance_media/image/bad.png" height="17" alt="">
                     </div>
                     <span id="b">0</span>
                 </div>
                 <div class="result_avg">
                     <div class="avg_part">
-                    <img src="/dance_media/image/miss.png" height="17" alt="">
+                        <img src="/dance_media/image/miss.png" height="17" alt="">
                     </div>
                     <span id="m">0</span>
                 </div>
                 <div class="result_avg">
                     <div class="avg_part">
-                    <img src="/dance_media/image/points.png" height="17" alt="">
+                        <img src="/dance_media/image/points.png" height="17" alt="">
                     </div>
                     <span id="pts">0</span>
                 </div>
@@ -175,8 +191,11 @@
     </div>
 </div>
 
-
-<script src="{{asset('dance_media/danceByMe.js')}}?v=3"></script>
+@if(!$versus)
+    <script src="{{asset('/dance/dance.js')}}"></script>
+@else
+    <script src="{{asset('/dance/dance.js')}}?v=true"></script>
+@endif
 <script>
     var tag = document.createElement('script');
 

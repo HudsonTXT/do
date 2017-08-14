@@ -166,14 +166,13 @@ class DOApi extends Controller
                 //insert and session start
                 $isOk = true;
             } else {
-                if($result->usergroup >= 1){ // testers = 3, admins = 2
+                if ($result->usergroup >= 1) { // testers = 3, admins = 2
                     $goToNew = DB::table('do_user')->where('mid', $vk['user']['id'])->update(array('name' => $vk['user']['first_name'], 'last' => $vk['user']['last_name'], 'href' => $vk['user']['href']));
                     if ($goToNew) {
                         $result = DB::table('do_user')->where('mid', $vk['user']['id'])->first();
                     }
                     $isOk = true;
                 }
-
 
 
             }
@@ -217,7 +216,6 @@ class DOApi extends Controller
     }
 
 
-
     public function result(Request $request)
     {
         //return $request->input('parts')['p'];
@@ -237,6 +235,12 @@ class DOApi extends Controller
                 }
             }
             $parts = $request->input('parts');
+            if(!empty($r['versus']) AND $r['versus'] == true){
+                $versus = 1;
+                DB::table('do_user')->where('id', '=', Session::get('user')->id)->decrement('versus_hearts');
+            }else{
+                $versus = false;
+            }
             DB::table('do_log')->insert(
                 ['uid' => Session::get('user')->id,
                     'song_type' => $request->input('song_type'),
@@ -249,6 +253,7 @@ class DOApi extends Controller
                     'bad' => $parts['b'],
                     'miss' => $parts['m'],
                     'coins' => $coins,
+                    'versus' => $versus,
                 ]
             );
             //$insertLog = DB::insert("INSERT INTO do_log (uid, song_type, song_id, score, exp, perf, cool, good, bad, miss, coins)
@@ -261,7 +266,6 @@ class DOApi extends Controller
                 ->select(DB::raw('max(do_log.score) as score'), 'do_user.name', 'do_user.last')
                 ->where('do_log.song_id', $request->input('song_id'))->groupby('do_log.uid')
                 ->orderby('score', 'desc')->limit(5)->get();
-
 
 
             //DB::update("UPDATE do_user SET coins = coins + $coins, exp = exp + $exp WHERE id = $r[uid]");
@@ -284,7 +288,7 @@ class DOApi extends Controller
 
     public function getActivity()
     {
-        $last5 = DB::select('SELECT dla.text as text, dlat.image as img
+        $last5 = DB::select('SELECT dla.text AS text, dlat.image AS img
 FROM do_log_activity dla
 JOIN do_log_activity_types dlat ON dla.type = dlat.id
 WHERE dla.uid = ' . Session::get('user')->id . '
@@ -313,8 +317,45 @@ LIMIT 0 , 5');
 
         $songInfo = DB::table('do_music')->where('id', $id)->first();
         //var_dump($songInfo);
-        return view('goDance', array('song' => $songInfo, 'u' => $this->userinfo['user']));
+        return view('goDance', array('versus' => false, 'song' => $songInfo, 'u' => $this->userinfo['user']));
 
+    }
+
+    public function versus($id = 0)
+    {
+        if($this->userinfo['user']->versus_hearts < 1){
+            return redirect('/versus');
+        }
+        $versusSong = DB::select('SELECT  (SELECT song_id FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE()) AS song_id, 
+(SELECT COALESCE(song_id,0) FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE() - INTERVAL 1 DAY) AS tomorrow_song_id,
+(SELECT COALESCE(sum(do_log.score),0) FROM do_log WHERE uid = ' . $this->userinfo['user']->id . ' AND DATE_FORMAT(danced_at, \'%Y-%m-%d\') = CURDATE() AND do_log.song_id = ((SELECT song_id FROM do_versus WHERE DATE_FORMAT(date, \'%Y-%m-%d\') = CURDATE()))) AS user_score, 
+(SELECT CONCAT(do_music.author, \' - \', do_music.name) FROM do_music WHERE do_music.id = song_id) AS song_name,
+(SELECT CONCAT(do_music.author, \' - \', do_music.name) FROM do_music WHERE do_music.id = tomorrow_song_id) AS tomorrow_song_name')[0];
+        $id = $versusSong->song_id;
+        if ($id <= 0) {
+            return redirect('/dance');
+        }
+        $user = Session::get('user');
+
+        if (!Session::has('user')) {
+            return redirect('/');
+        }
+
+        $songInfo = DB::table('do_music')->where('id', $id)->first();
+        //var_dump($songInfo);
+        return view('goDance', array('versus' => true, 'song' => $songInfo, 'u' => $this->userinfo['user']));
+
+    }
+
+    public function danceJs()
+    {
+        $versus = false;
+        if(!empty(app('request')->request->all()['v']) AND app('request')->request->all()['v'] == 'true'){
+            $versus = true;
+    }
+
+        return response()->view('javascript.dance-js', ['versus' => $versus], 200)
+            ->header('Content-Type', 'application/javascript; charset=utf-8');
     }
 
     public function tutorialEnd()
