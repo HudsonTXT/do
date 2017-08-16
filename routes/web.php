@@ -85,7 +85,7 @@ Route::get('chest/dialy', 'Chest@dialy');
 Route::get('versus/', 'Versus@index');
 Route::get('versus/lovefandanceru/update', 'Versus@cron');
 
-
+Route::get('pay/{page?}', 'payController@index');
 
 
 
