@@ -321,6 +321,23 @@ body {
     width: 100px;
   }
 }
+.user_combo{
+  position: absolute;
+  top: 0;
+  left: 335px;
+  color: #fff;
+  box-shadow: inset 0px 2px 133px 0px rgba(211,65,65,0.5);
+  font-size: 14px;
+  padding: 13px 30px;
+  font-family: 'Proxima Nova Bold';
+  text-transform: uppercase;
+
+  span{
+    display: block;
+    font-size: 20px;
+    text-transform: none;
+  }
+}
 
 /*.info {
     position: fixed;

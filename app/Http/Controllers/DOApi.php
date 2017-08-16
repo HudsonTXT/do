@@ -311,9 +311,7 @@ LIMIT 0 , 5');
         }
         $user = Session::get('user');
 
-        if (!Session::has('user')) {
-            return redirect('/');
-        }
+
 
         $songInfo = DB::table('do_music')->where('id', $id)->first();
         //var_dump($songInfo);
@@ -323,6 +321,9 @@ LIMIT 0 , 5');
 
     public function versus($id = 0)
     {
+        if (!Session::has('user') or empty($this->userinfo['user'])) {
+            return redirect('/');
+        }
         if($this->userinfo['user']->versus_hearts < 1){
             return redirect('/versus');
         }
@@ -337,9 +338,6 @@ LIMIT 0 , 5');
         }
         $user = Session::get('user');
 
-        if (!Session::has('user')) {
-            return redirect('/');
-        }
 
         $songInfo = DB::table('do_music')->where('id', $id)->first();
         //var_dump($songInfo);

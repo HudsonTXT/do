@@ -12,10 +12,10 @@
         imgSource = '{{asset('dance_media/image')}}/';
         var crsf = '{{ csrf_token() }}';
         var mus = {
-            perfect: new Audio('{{asset('dance_media/music/perfect.mp3')}}'),
-            cool: new Audio('{{asset('dance_media/music/cool.mp3')}}'),
+            perfect: new Audio('{{asset('dance_media/music/perfect.mp3?v=2')}}'),
+            cool: new Audio('{{asset('dance_media/music/cool.mp3?v=2')}}'),
             good: new Audio('{{asset('dance_media/music/good.mp3')}}'),
-            bad: new Audio('{{asset('dance_media/music/bad.mp3')}}'),
+            bad: new Audio('{{asset('dance_media/music/bad.mp3?v=2')}}'),
             miss: new Audio('{{asset('dance_media/music/miss.mp3')}}')
         };
         var bpm = {{$song->bpm}};
@@ -101,7 +101,10 @@
         <div class="user-name">{{$u->name}} {{$u->last}}</div>
         <div class="user-score" id="pt">0</div>
     </div>
-    /*
+            <div class="user_combo">
+                <span>x1</span>
+            </div>
+
 <!--div class="info">
         <span class="time-bar"><span class="bar_inner"></span><span id="song-name">{{$song->author}}
         - {{$song->name}}</span></span>

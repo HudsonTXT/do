@@ -1,5 +1,15 @@
 .profile{
-
+.block_header{
+  span{
+    a{
+      color: inherit;
+      float: right;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+    vertical-align: middle;
+  }
+}
   .block_content {
     padding: 15px;
     box-sizing: border-box;

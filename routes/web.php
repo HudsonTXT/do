@@ -61,7 +61,9 @@ Route::get('/dance/versus', 'DOApi@versus');
 Route::get('/dance/dance.js', 'DOApi@danceJs');
 
 //Route::get('/profile/', 'SocialApi@mainProfile');
+Route::get('/profile/edit', 'SocialApi@editProfile');
 Route::get('/profile/{id?}', 'SocialApi@anotherProfile');
+
 Route::get('/exp/{exp?}', 'DOApi@getExp'); //DELETE THIS
 Route::get('api/checkAct', 'DOApi@checkAct');
 

@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="748c8c6c-6cda-4036-9b7c-991094197750" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dance_media/music/bad.mp3" afterPath="$PROJECT_DIR$/public/dance_media/music/bad.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dance_media/music/cool.mp3" afterPath="$PROJECT_DIR$/public/dance_media/music/cool.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dance_media/music/perfect.mp3" afterPath="$PROJECT_DIR$/public/dance_media/music/perfect.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DOApi.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DOApi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Versus.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Versus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialApi.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialApi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/profile.css" afterPath="$PROJECT_DIR$/public/css/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/profile.css.map" afterPath="$PROJECT_DIR$/public/css/profile.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/profile.scss" afterPath="$PROJECT_DIR$/public/css/profile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dance_media/style.css" afterPath="$PROJECT_DIR$/public/dance_media/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dance_media/style.css.map" afterPath="$PROJECT_DIR$/public/dance_media/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dance_media/style.scss" afterPath="$PROJECT_DIR$/public/dance_media/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/goDance.blade.php" afterPath="$PROJECT_DIR$/resources/views/goDance.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/versus.blade.php" afterPath="$PROJECT_DIR$/resources/views/versus.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php" afterPath="$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,70 +33,100 @@
       <file leaf-file-name="goDance.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/goDance.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="74" column="101" lean-forward="false" selection-start-line="74" selection-start-column="101" selection-end-line="74" selection-end-column="101" />
+            <state relative-caret-position="597">
+              <caret line="105" column="18" lean-forward="false" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="versus.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/versus.blade.php">
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="52" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="221">
+              <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dance.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/dance.blade.php">
+      <file leaf-file-name="DOApi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DOApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
-              <caret line="84" column="93" lean-forward="false" selection-start-line="84" selection-start-column="93" selection-end-line="84" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Versus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Versus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="85" column="60" lean-forward="false" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="60" />
+            <state relative-caret-position="620">
+              <caret line="339" column="0" lean-forward="false" selection-start-line="339" selection-start-column="0" selection-end-line="339" selection-end-column="0" />
               <folding>
-                <marker date="1502746174681" expanded="true" signature="640:668" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:670" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:671" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:679" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:696" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:697" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:698" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:708" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:719" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:720" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="640:727" ph="UPDATE do_us... " />
-                <marker date="1502746174681" expanded="true" signature="894:914" ph="/* Обновлени... " />
-                <marker date="1502746174681" expanded="true" signature="946:992" ph="SELECT * FRO... do_music" />
-                <marker date="1502746174681" expanded="true" signature="1169:1646" ph="SELECT (SELE... " />
-                <marker date="1502746174681" expanded="true" signature="1178:1257" ph="SELECT song_... do_versus" />
-                <marker date="1502746174681" expanded="true" signature="1273:1381" ph="SELECT COALE... do_versus" />
-                <marker date="1502746174681" expanded="true" signature="1405:1501" ph="SELECT CONCA... do_music" />
-                <marker date="1502746174681" expanded="true" signature="1518:1623" ph="SELECT CONCA... do_music" />
-                <marker date="1502746174681" expanded="true" signature="1739:1916" ph="SELECT uid F... do_log" />
-                <marker date="1502746174681" expanded="true" signature="4318:5086" ph="SELECT (SELE... " />
-                <marker date="1502746174681" expanded="true" signature="4327:4406" ph="SELECT song_... do_versus" />
-                <marker date="1502746174681" expanded="true" signature="4422:4530" ph="SELECT COALE... do_versus" />
-                <marker date="1502746174681" expanded="true" signature="4554:4615" ph="SELECT COALE... do_log" />
-                <marker date="1502746174681" expanded="true" signature="4554:4699" ph="SELECT COALE... do_log" />
-                <marker date="1502746174681" expanded="true" signature="4554:4826" ph="SELECT COALE... do_log" />
-                <marker date="1502746174681" expanded="true" signature="4745:4824" ph="SELECT song_... do_versus" />
-                <marker date="1502746174681" expanded="true" signature="4845:4941" ph="SELECT CONCA... do_music" />
-                <marker date="1502746174681" expanded="true" signature="4958:5063" ph="SELECT CONCA... do_music" />
-                <marker date="1502746174681" expanded="true" signature="5465:5582" ph="SELECT uid F... do_log" />
-                <marker date="1502746174681" expanded="true" signature="5465:5617" ph="SELECT uid F... do_log" />
-                <marker date="1502746174681" expanded="true" signature="5465:5635" ph="SELECT uid F... do_log" />
+                <element signature="e#40#68#0#PHP" expanded="true" />
+                <marker date="1502879201513" expanded="true" signature="11301:11503" ph="SELECT dla.t... do_log_activity" />
+                <marker date="1502879201513" expanded="true" signature="12441:13191" ph="SELECT (SELE... " />
+                <marker date="1502879201513" expanded="true" signature="12450:12529" ph="SELECT song_... do_versus" />
+                <marker date="1502879201513" expanded="true" signature="12545:12653" ph="SELECT COALE... do_versus" />
+                <marker date="1502879201513" expanded="true" signature="12677:12931" ph="SELECT COALE... do_log" />
+                <marker date="1502879201513" expanded="true" signature="12850:12929" ph="SELECT song_... do_versus" />
+                <marker date="1502879201513" expanded="true" signature="12950:13046" ph="SELECT CONCA... do_music" />
+                <marker date="1502879201513" expanded="true" signature="13063:13168" ph="SELECT CONCA... do_music" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dance_media/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="332" column="28" lean-forward="false" selection-start-line="332" selection-start-column="28" selection-end-line="332" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dance-js.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dance_media/music.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocialApi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialApi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-182">
+              <caret line="28" column="69" lean-forward="false" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+              <folding>
+                <marker date="1502832524376" expanded="true" signature="1366:1956" ph="select u.*, do_user" />
+                <marker date="1502832524376" expanded="true" signature="1366:1957" ph="select do_us... do_user" />
+                <marker date="1502832524376" expanded="true" signature="1462:1622" ph="select sum(i... do_user_items" />
+                <marker date="1502832524376" expanded="true" signature="1663:1823" ph="select sum(i... do_user_items" />
+                <marker date="1502832524376" expanded="true" signature="3691:3821" ph="select i.* f... do_user_items" />
+                <marker date="1502832524376" expanded="true" signature="3691:3830" ph="select m.* f... do_user_medals" />
+                <marker date="1502832524376" expanded="true" signature="3691:3832" ph="select i.* f... do_user_items" />
+                <marker date="1502832524376" expanded="true" signature="4007:4069" ph="select IFNUL... do_log" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <marker date="1502832524333" expanded="true" signature="100:228" ph="..." />
+                <marker date="1502832524333" expanded="true" signature="185:217" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,10 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fadeOut</find>
-      <find>.bonus</find>
-      <find>function codeO</find>
-      <find>.c{</find>
       <find>spacebar</find>
       <find>EventService</find>
       <find>М</find>
@@ -134,6 +170,10 @@
       <find>function go</find>
       <find>result</find>
       <find>FROM do_log</find>
+      <find>cool.mo3</find>
+      <find>user</find>
+      <find>prev</find>
+      <find>goDa</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -151,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LoginDO.php" />
         <option value="$PROJECT_DIR$/public/dance/music.js" />
         <option value="$PROJECT_DIR$/public/dance/style.css" />
         <option value="$PROJECT_DIR$/public/dance/danceByMe.js" />
@@ -171,10 +210,8 @@
         <option value="$PROJECT_DIR$/public/landing/js/login.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Login.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/public/css/profile.scss" />
         <option value="$PROJECT_DIR$/public/js/profile.js" />
         <option value="$PROJECT_DIR$/app/Http/Shop.php" />
-        <option value="$PROJECT_DIR$/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/public/css/shop.scss" />
         <option value="$PROJECT_DIR$/public/js/shop.js" />
         <option value="$PROJECT_DIR$/resources/views/shop.blade.php" />
@@ -187,7 +224,6 @@
         <option value="$PROJECT_DIR$/public/js/versus.js" />
         <option value="$PROJECT_DIR$/public/css/versus.scss" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DORating.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SocialApi.php" />
         <option value="$PROJECT_DIR$/resources/views/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Shop.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
@@ -195,13 +231,17 @@
         <option value="$PROJECT_DIR$/public/dance_media/danceByMe.js" />
         <option value="$PROJECT_DIR$/resources/views/dance.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.scss" />
-        <option value="$PROJECT_DIR$/public/dance_media/style.scss" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Versus.php" />
+        <option value="$PROJECT_DIR$/resources/views/versus.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/profile.scss" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/default.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SocialApi.php" />
+        <option value="$PROJECT_DIR$/public/dance_media/style.scss" />
         <option value="$PROJECT_DIR$/resources/views/goDance.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DOApi.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Versus.php" />
-        <option value="$PROJECT_DIR$/resources/views/versus.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/profile.blade.php" />
       </list>
     </option>
   </component>
@@ -278,6 +318,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="do" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="do" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,6 +475,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\lar\do\resources\views" />
       <recent name="C:\OpenServer\domains\lar\do\resources\views\javascript" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -516,7 +579,7 @@
       <workItem from="1501282427023" duration="67745000" />
       <workItem from="1501778946456" duration="14119000" />
       <workItem from="1502480716705" duration="4411000" />
-      <workItem from="1502739940413" duration="7233000" />
+      <workItem from="1502739940413" duration="16163000" />
     </task>
     <task id="LOCAL-00001" summary="versus addded">
       <created>1501845188657</created>
@@ -539,20 +602,34 @@
       <option name="project" value="LOCAL" />
       <updated>1502699237143</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Попытки для версуса">
+      <created>1502747364623</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1502747364623</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Попытки для версуса">
+      <created>1502747416413</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1502747416413</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271001000" />
+    <option name="totallyTimeSpent" value="279931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15405117" sideWeight="0.503792" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -606,55 +683,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/dance_media/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/introjs.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="11125" column="97" lean-forward="false" selection-start-line="11125" selection-start-column="97" selection-end-line="11125" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/landing/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/etc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="179" column="6" lean-forward="true" selection-start-line="179" selection-start-column="6" selection-end-line="179" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -735,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/profile.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="188" column="16" lean-forward="false" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/shop.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -753,13 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/shop.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -843,42 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="160" column="62" lean-forward="false" selection-start-line="160" selection-start-column="62" selection-end-line="160" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="103" column="37" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
-          <folding>
-            <element signature="e#40#71#0#PHP" expanded="false" />
-            <marker date="1502082865326" expanded="true" signature="1097:1687" ph="select u.*, do_user" />
-            <marker date="1502082865326" expanded="true" signature="1097:1688" ph="select do_us... do_user" />
-            <marker date="1502082865326" expanded="true" signature="1193:1353" ph="select sum(i... do_user_items" />
-            <marker date="1502082865326" expanded="true" signature="1394:1554" ph="select sum(i... do_user_items" />
-            <marker date="1502082865326" expanded="true" signature="3417:3547" ph="select i.* f... do_user_items" />
-            <marker date="1502082865326" expanded="true" signature="3417:3556" ph="select m.* f... do_user_medals" />
-            <marker date="1502082865326" expanded="true" signature="3417:3558" ph="select i.* f... do_user_items" />
-            <marker date="1502082865326" expanded="true" signature="3733:3795" ph="select IFNUL... do_log" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/versus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -925,59 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/dance_media/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dance_media/danceByMe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="278" column="24" lean-forward="false" selection-start-line="278" selection-start-column="24" selection-end-line="278" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DOApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="237" column="62" lean-forward="false" selection-start-line="237" selection-start-column="62" selection-end-line="237" selection-end-column="62" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-            <marker date="1502745658150" expanded="true" signature="11301:11503" ph="SELECT dla.t... do_log_activity" />
-            <marker date="1502745658150" expanded="true" signature="12406:13156" ph="SELECT (SELE... " />
-            <marker date="1502745658150" expanded="true" signature="12415:12494" ph="SELECT song_... do_versus" />
-            <marker date="1502745658150" expanded="true" signature="12510:12618" ph="SELECT COALE... do_versus" />
-            <marker date="1502745658150" expanded="true" signature="12642:12896" ph="SELECT COALE... do_log" />
-            <marker date="1502745658150" expanded="true" signature="12815:12894" ph="SELECT song_... do_versus" />
-            <marker date="1502745658150" expanded="true" signature="12915:13011" ph="SELECT CONCA... do_music" />
-            <marker date="1502745658150" expanded="true" signature="13028:13133" ph="SELECT CONCA... do_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="89" column="30" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
           <caret line="182" column="27" lean-forward="false" selection-start-line="182" selection-start-column="27" selection-end-line="182" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="60" column="47" lean-forward="false" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -987,8 +920,21 @@
         <state relative-caret-position="306">
           <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
-            <element signature="e#119#152#0#PHP" expanded="true" />
+            <element signature="e#119#152#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dance_media/images/logo-battle.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/versus.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="52" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,26 +978,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/profile.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="63" column="53" lean-forward="false" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="160" column="62" lean-forward="false" selection-start-line="160" selection-start-column="62" selection-end-line="160" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/shop.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="28" column="69" lean-forward="false" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+          <folding>
+            <marker date="1502832524376" expanded="true" signature="1366:1956" ph="select u.*, do_user" />
+            <marker date="1502832524376" expanded="true" signature="1366:1957" ph="select do_us... do_user" />
+            <marker date="1502832524376" expanded="true" signature="1462:1622" ph="select sum(i... do_user_items" />
+            <marker date="1502832524376" expanded="true" signature="1663:1823" ph="select sum(i... do_user_items" />
+            <marker date="1502832524376" expanded="true" signature="3691:3821" ph="select i.* f... do_user_items" />
+            <marker date="1502832524376" expanded="true" signature="3691:3830" ph="select m.* f... do_user_medals" />
+            <marker date="1502832524376" expanded="true" signature="3691:3832" ph="select i.* f... do_user_items" />
+            <marker date="1502832524376" expanded="true" signature="4007:4069" ph="select IFNUL... do_log" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1502832524333" expanded="true" signature="100:228" ph="..." />
+            <marker date="1502832524333" expanded="true" signature="185:217" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dance.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
+        <state relative-caret-position="1428">
           <caret line="84" column="93" lean-forward="false" selection-start-line="84" selection-start-column="93" selection-end-line="84" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/goDance.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/dance_media/scripts/combo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="101" lean-forward="false" selection-start-line="74" selection-start-column="101" selection-end-line="74" selection-end-column="101" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dance_media/scripts/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/versus.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/dance_media/dance.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="52" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dance_media/danceByMe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="278" column="24" lean-forward="false" selection-start-line="278" selection-start-column="24" selection-end-line="278" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dance_media/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dance_media/music.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dance_media/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="332" column="28" lean-forward="false" selection-start-line="332" selection-start-column="28" selection-end-line="332" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/javascript/dance-js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DOApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="339" column="0" lean-forward="false" selection-start-line="339" selection-start-column="0" selection-end-line="339" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+            <marker date="1502879201513" expanded="true" signature="11301:11503" ph="SELECT dla.t... do_log_activity" />
+            <marker date="1502879201513" expanded="true" signature="12441:13191" ph="SELECT (SELE... " />
+            <marker date="1502879201513" expanded="true" signature="12450:12529" ph="SELECT song_... do_versus" />
+            <marker date="1502879201513" expanded="true" signature="12545:12653" ph="SELECT COALE... do_versus" />
+            <marker date="1502879201513" expanded="true" signature="12677:12931" ph="SELECT COALE... do_log" />
+            <marker date="1502879201513" expanded="true" signature="12850:12929" ph="SELECT song_... do_versus" />
+            <marker date="1502879201513" expanded="true" signature="12950:13046" ph="SELECT CONCA... do_music" />
+            <marker date="1502879201513" expanded="true" signature="13063:13168" ph="SELECT CONCA... do_music" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/goDance.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="105" column="18" lean-forward="false" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
           <folding />
         </state>
       </provider>

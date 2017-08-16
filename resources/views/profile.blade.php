@@ -11,7 +11,7 @@
     @endsection
     @section('content')
         <div class="block profile">
-            <div class="block_header">Профиль</div>
+            <div class="block_header">Профиль @if($u->id == 1/*$p->id*/)<span><a href="/profile/edit">Редактировать</a></span>@endif</div>
             <div class="block_content">
                 <div class="profile_image animated zoomIn">
                     <img src="{{asset('img/av.png')}}" alt="" width="200">

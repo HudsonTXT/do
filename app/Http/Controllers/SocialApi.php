@@ -14,10 +14,19 @@ use App\Http\Controllers\DOApi;
 class SocialApi extends Controller
 {
     public $userinfo;
+
     function __construct()
     {
         new VKUsers();
         $this->userinfo = VKUsers::$a;
+    }
+
+    public function editProfile()
+    {
+        if (!Session::has('user')) {
+            return redirect('/');
+        }
+        return view('default', array( 'u' => $this->userinfo['user'], 'a' => $this->userinfo['act'], 'new' => $this->userinfo['new']));
     }
 
     public function anotherProfile($id = 0)
@@ -36,31 +45,31 @@ where u.id = 5
         if (!Session::has('user')) {
             return redirect('/');
         }
-        if($id == 0){
-            return redirect('/profile/'.$this->userinfo['user']->id);
+        if ($id == 0) {
+            return redirect('/profile/' . $this->userinfo['user']->id);
         }
 
 
-        $user = DB::select('select u.*, s.name as status_name, s.color as status_color, max(l.lvl) as lvl, 
+        $user = DB::select('SELECT u.*, s.name AS status_name, s.color AS status_color, max(l.lvl) AS lvl, 
 COALESCE((
     
-select sum(i.value) 
-from do_user_items doi 
+SELECT sum(i.value) 
+FROM do_user_items doi 
 JOIN do_items i ON doi.item_id = i.id
-where doi.uid = u.id and i.type = \'exp_bonus\' AND ended > CURRENT_TIMESTAMP
+WHERE doi.uid = u.id AND i.type = \'exp_bonus\' AND ended > CURRENT_TIMESTAMP
     
-),0) as exp_bonus,
+),0) AS exp_bonus,
 COALESCE((
 
-    select sum(i.value) 
-from do_user_items doi 
+    SELECT sum(i.value) 
+FROM do_user_items doi 
 JOIN do_items i ON doi.item_id = i.id
-where doi.uid = u.id and i.type = \'dmn_bonus\' AND ended > CURRENT_TIMESTAMP
+WHERE doi.uid = u.id AND i.type = \'dmn_bonus\' AND ended > CURRENT_TIMESTAMP
     
 
-),0) as dmn_bonus
-from do_user u
-join do_levels l
+),0) AS dmn_bonus
+FROM do_user u
+JOIN do_levels l
 JOIN do_user_status s ON u.status = s.id 
 
 WHERE u.id =?  AND u.exp >= l.exp ', [$id])[0];
@@ -86,29 +95,29 @@ WHERE u.id =?  AND u.exp >= l.exp ', [$id])[0];
             $nextLvl = $nextLvl->exp;
             //$lvlPercent['percent'] = $user->maxExp / $nextLvl;
             $lvlPercent['percent'] = ($nextLvl - $user->maxExp) / ($nextLvl - $prevLvl);
-        }elseif($user->lvl == 1){
+        } elseif ($user->lvl == 1) {
             $nextLvl = DB::table('do_levels')->select('exp')->where('exp', '>', $user->maxExp)->first();
             $nextLvl = $nextLvl->exp;
             $lvlPercent['percent'] = $user->maxExp / $nextLvl;
 
-        }elseif($user->lvl == 2){
+        } elseif ($user->lvl == 2) {
             $nextLvl = DB::table('do_levels')->select('exp')->where('exp', '>', $user->maxExp)->first();
             $nextLvl = $nextLvl->exp;
             $lvlPercent['percent'] = $user->maxExp / $nextLvl;
 
-        }  else {
+        } else {
             $lvlPercent['percent'] = 1;
             $nextLvl = 0;
         }
-        $medals = DB::select('select i.* from do_user_items dum 
+        $medals = DB::select('SELECT i.* FROM do_user_items dum 
 JOIN do_items i ON dum.item_id = i.id
-where uid = ? and ended > CURRENT_TIMESTAMP and  i.type = \'medals\'', [$id]);
+WHERE uid = ? AND ended > CURRENT_TIMESTAMP AND  i.type = \'medals\'', [$id]);
         $lvlPercent['now'] = $user->maxExp;
         $lvlPercent['next'] = $nextLvl;
 
 
         //**Расчет процента успешности танца
-        $danceProc = DB::select('select COALESCE(AVG(exp), 0) as proc FROM do_log WHERE uid = ?', [$id])[0];
+        $danceProc = DB::select('SELECT COALESCE(AVG(exp), 0) AS proc FROM do_log WHERE uid = ?', [$id])[0];
         $danceProc = $danceProc->proc / 8888;
 
         return view('profile', array('my' => false, 'medals' => $medals, 'p' => $user, 'u' => $this->userinfo['user'], 'a' => $this->userinfo['act'], 'new' => $this->userinfo['new'], 'lvlPerc' => $lvlPercent, 'danceProc' => $danceProc));

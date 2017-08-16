@@ -19,7 +19,9 @@ last vers/ 15.08.2017
  */
 
 $(function () {
-
+    var perfectCombo = true;
+    var prevOcenka = null;
+    var perfectBonus = 1;
     var level = 0;
     var arrow = 0; //Сколько стрелок выведено
     var status = 1;
@@ -126,8 +128,19 @@ $(function () {
             10: 3975,
             11: 4725
         };
+        if(perfectCombo && prevOcenka == 'perfect' && ocenka == 'perfect'){
+            perfectBonus += 0.1;
+            perfectBonus = Math.round(perfectBonus * 100) / 100;
+            if(perfectBonus > 3){
+                    perfectBonus = 3;
+                }
+
+        }else{
+            perfectBonus = 1;
+        }
+        $('.user_combo span').text('x'+perfectBonus);
         var points = {
-            perfect: coolRating[level] / 100 * 200,
+            perfect: coolRating[level] / 100 * 200 * perfectBonus,
             cool: coolRating[level],
             good: coolRating[level] / 100 * 70,
             bad: coolRating[level] / 100 * 45,
@@ -135,6 +148,9 @@ $(function () {
         };
         pt = Math.floor(pt + points[ocenka]);
         $('#pt').text(pt);
+        if(perfectCombo){
+        prevOcenka = ocenka;
+        }
         return pt;
     }
 
@@ -142,6 +158,7 @@ $(function () {
         $('.ocenka').css('opacity', 1).addClass(ocenka);
         if (ocenka == 'perfect') {
             $('.effects').addClass('perfect');
+
         } else {
             $('.effects').removeClass('perfect');
         }
@@ -165,6 +182,7 @@ $(function () {
         } else {
             $('.effects').removeClass('good');
         }
+
 
         mus[ocenka].volume = 1;
         mus[ocenka].pause();
